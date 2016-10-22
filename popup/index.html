@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+	<header><img src="clintool.jpg" id="logo"/></header>
+	<nav id="main"><a href="#" id="show-settings" class="current">Settings</a><a href="#" id="show-decoder">Decoder</a><a href="#" id="show-about">About</a></nav>
+	<div id="settings" class="enabled">
+	<div id="o-enabled" class="option">
+		<h2>Turn on/off </h2>
+		<input type="checkbox" id="c-enabled" name="c-enabled" checked/>
+		<label for="c-enabled" id="c-enabled-label" class="enabled">Enabled</label>
+		<label for="c-enabled" id="c-enabled-label" class="disabled">Disabled</label>
+	</div>
+	<div id="o-freq" class="option">
+		<h2>Invisible watermark frequency</h2>
+		<div id="o-nt"><input type="radio" name="freq" value="times" id="times" checked><div class="o-option">Insert <input type="number" id="times-value" value="1" checked/> times</div>
+		<span class="seperator">OR</span></div><div>
+		<div id="o-nt"><input type="radio" name="freq" value="after" id="after"/><div class="o-option">After every <input type="number" id="after-value" value="1"/> letters</div></div></div>	
+	</div>
+	</div>
+	<div id="decoder">
+		<h2>Decoder</h2>
+		<p class="info">Did one of your recipients leak confidential info? Copy-paste the leaked text to discover who!</p>
+		<textarea id="input" placeholder="Leaked text of an e-mail sent with the Clintool enabled"></textarea>
+		<button id="btn-decode">Decode!</button>
+		<input type="text" id="output" placeholder="<result>" />
+	</div>
+	<div id="about">
+		<h2>About</h2>
+		<p class="info">The Clintool does not prevent e-mails from being leaked, but once they have been leaked, it can determine which recipient leaked the information, if the e-mail was sent through Gmail with the Clintool enabled.<br/><br/> It works by sending slightly different e-mails to all recipients which will look exactly the same, but secretly contain their e-mail address. Whenever they leak the information, they will also leak their e-mail address. This tool was built with <a href="http://marypoppit.com" target="_blank">marypoppit.com</a> and <a href="https://github.com/KartikTalwar/gmail.js" target="_blank">gmail.js</a>. <br/><br/> Even though this tool was tested thoroughly, it provides no guarantuee. The Clintool does not store any private information and does leak any information from your e-mail account. This tool is entirely open source and can be found at <a href="https://github.com/IntiDC/clintool">Github</a></p>
+	</div>
+	<footer>
+	<b>By Inti De Ceukelaire (<a href="https://www.twitter.com/securinti" target="_blank">@securinti</a>)</b><br/><br />More info: <a href="http://www.marypoppit.com" target="_blank">marypoppit.com</a><br/>
+	<br/>
+	<p class="greeting"><img src="belgium.png" id="flag"/>Greetings from <a href="https://www.youtube.com/watch?v=NSfzyPq8430" target="_blank" alt="Oilsjt is een wereldstad" target="_blank">Oilsjt</a>!</p>
+	</footer>
+	</div>
+</body>
+</html>
